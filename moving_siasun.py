@@ -32,7 +32,7 @@ while simulation_app.is_running():
         if world.current_time_step_index == 0:
             world.reset()
     siasun.apply_action(ArticulationAction(
-        joint_positions=0.8 * np.sin(0.001*i), 
+        joint_positions=0.5 * np.sin(0.01*i), 
         joint_efforts=None, 
         joint_velocities=None))
     i = i + 1
