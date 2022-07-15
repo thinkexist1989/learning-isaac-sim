@@ -1,0 +1,38 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"1_Link" [label="1_Link"];
+"1-1_Link" [label="1-1_Link"];
+"2_Link" [label="2_Link"];
+"2-1_Link" [label="2-1_Link"];
+"3_Link" [label="3_Link"];
+"4_Link" [label="4_Link"];
+"5_Link" [label="5_Link"];
+"5-1_Link" [label="5-1_Link"];
+"6_Link" [label="6_Link"];
+"6-1_Link" [label="6-1_Link"];
+"laser_Link" [label="laser_Link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "1-joint" [label="xyz: -0.194 0.59539 -0.604 \nrpy: 0 -0 0"]
+"1-joint" -> "1_Link"
+"1_Link" -> "1-1_joint" [label="xyz: -0.0019416 0.019905 -0.0435 \nrpy: 1.5708 -5.55112e-17 -1.4736"]
+"1-1_joint" -> "1-1_Link"
+"base_link" -> "2-joint" [label="xyz: 0.194 0.59535 -0.6056 \nrpy: 0 -0 0"]
+"2-joint" -> "2_Link"
+"2_Link" -> "2-1_joint" [label="xyz: -0.0028411 0.022783 -0.042013 \nrpy: 1.5807 0.069104 -1.4279"]
+"2-1_joint" -> "2-1_Link"
+"base_link" -> "3_joint" [label="xyz: -0.2595 0.2765 -0.605 \nrpy: 1.5708 -0 -1.5708"]
+"3_joint" -> "3_Link"
+"base_link" -> "4_joint" [label="xyz: 0.2595 0.27512 -0.61343 \nrpy: 1.5708 -0 1.5708"]
+"4_joint" -> "4_Link"
+"base_link" -> "5_joint" [label="xyz: -0.18 -0.0885 -0.604 \nrpy: 0 -0 0"]
+"5_joint" -> "5_Link"
+"5_Link" -> "5-1_joint" [label="xyz: 0.0017368 0.019924 -0.0435 \nrpy: 1.5708 -0 -1.5708"]
+"5-1_joint" -> "5-1_Link"
+"base_link" -> "6-joint" [label="xyz: 0.18 -0.0885 -0.604 \nrpy: 0 -0 0"]
+"6-joint" -> "6_Link"
+"6_Link" -> "6-1_joint" [label="xyz: -0.00077959 0.019985 -0.0435 \nrpy: 1.5708 -1.11022e-16 -1.5318"]
+"6-1_joint" -> "6-1_Link"
+"base_link" -> "laser_joint" [label="xyz: 0 0.67006 -0.529 \nrpy: 0 -0 0"]
+"laser_joint" -> "laser_Link"
+}
